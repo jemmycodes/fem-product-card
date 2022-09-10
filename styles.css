@@ -1,0 +1,175 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url(fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Fraunces-Bold";
+  src: url(fonts/Fraunces-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url(fonts/Montserrat-Bold.ttf);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: center;
+  background-color: hsl(30, 38%, 92%);
+}
+
+.img-mobile {
+  display: none;
+}
+
+.container {
+  display: flex;
+  /* flex-direction: column; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  min-width: 600px;
+  /* margin: 0 auto; */
+  /* max-height: 55%; */
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.img-container {
+  min-width: 50%;
+  max-height: 100%;
+}
+
+.desktop-image {
+  width: 100%;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  height: 100%;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 4rem;
+}
+
+.header {
+  letter-spacing: 0.5rem;
+  font-family: "Montserrat-Medium";
+  text-transform: uppercase;
+  color: hsl(228, 12%, 48%);
+}
+
+.main-heading,
+.big-price {
+  font-family: "Fraunces-Bold";
+}
+
+.text {
+  font-family: "Montserrat-Medium";
+  color: hsl(228, 12%, 48%);
+}
+
+.big-price {
+  font-size: 3rem;
+  color: hsl(158, 36%, 37%);
+}
+
+.small-price {
+  font-family: "Montserrat-Medium";
+  color: hsl(22, 12%, 48%);
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.to-cart {
+  text-decoration: none;
+  text-align: center;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  padding-block: 1.5rem;
+  font-family: "Montserrat-Bold";
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  background-image: url(images/icon-cart.svg);
+  background-repeat: no-repeat;
+  background-position: 30px center;
+}
+
+.to-cart:hover {
+  filter: brightness(0.5);
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    min-width: 320px;
+    display: flex;
+    max-height: fit-content;
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .header {
+    font-size: 1.45rem;
+  }
+
+  .main-heading {
+    font-size: 2.4rem;
+  }
+
+  .img-container {
+    max-height: 30%;
+    width: 100%;
+  }
+
+  .text {
+    font-size: 1.5rem;
+  }
+
+  .img-mobile {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+
+  .text-content {
+    gap: 1rem;
+    /* justify-content: space-between; */
+    margin-block: 1.7rem;
+  }
+}
